@@ -13,10 +13,17 @@ accountCity = "Bengaluru"
 
 console.log(accountId);
 
+
+/*
+var accountPassword=10;
+you can redeclare the same variable in var which is not a good practice
+*/
+
 /*
 Prefer not to use var
 because of issue in block scope and functional scope
 */
+
 
 
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
