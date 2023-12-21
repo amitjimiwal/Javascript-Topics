@@ -6,8 +6,13 @@ but they are in Temporal Dead Zone due to which they can't be accessed until the
 Temporal Dead Zone- The temporal Dead zone is the duration between the memory allocation and the initialization of let and const in the separate memory space 
 */
 console.log(this.empCity); // undefined
-console.log(empName); //error
+// console.log(empName); //error
 console.log(empCity); //undefined
 let empName="Jimiwal";
 var empCity="Delhi";
 console.log(this.empCity); //Delhi
+//with functions;
+const getName=()=>{
+     console.log(empName);
+}
+getName();
