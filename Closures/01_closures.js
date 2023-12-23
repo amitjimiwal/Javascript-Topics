@@ -33,4 +33,17 @@ function x(){
           }, id*1000);
      }
 }
-x();
+// x();
+
+//same using var ; we bind it another function that takes different values for each  call
+function y(){
+     for (var id = 1; id <=5; id++) {
+          function z(k){
+               setTimeout(() => {
+                    console.log(k);
+               }, k*1000);
+          }
+          z(id);
+     }
+}
+y();
