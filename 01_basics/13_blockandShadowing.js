@@ -10,3 +10,5 @@ const b = 10;
   console.log(b); // 10
 }
 console.log(a); //10;
+const account=true;
+console.log(typeof account);
