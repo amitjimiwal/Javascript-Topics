@@ -1,6 +1,6 @@
 const marvel_heros = ["thor", "Ironman", "spiderman"]
 const dc_heros = ["superman", "flash", "batman"]
-
+console.log(Array.from("Amit"))
 // marvel_heros.push(dc_heros)
 
 // console.log(marvel_heros);
@@ -22,7 +22,7 @@ console.log(real_another_array);
 
 console.log(Array.isArray("Hitesh"))
 console.log(Array.from("Hitesh"))
-console.log(Array.from({name: "hitesh"})) // interesting
+console.log(Array.from({ name: "hitesh" })) // interesting
 
 let score1 = 100
 let score2 = 200

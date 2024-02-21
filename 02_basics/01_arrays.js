@@ -5,15 +5,17 @@ const myHeors = ["shaktiman", "naagraj"]
 
 const myArr2 = new Array(1, 2, 3, 4)
 // console.log(myArr[1]);
-
+const myarr = [10, 20, 30];
+myarr.push(10);
+console.log(myarr);
 // Array methods
 
 // myArr.push(6)
 // myArr.push(7)
 // myArr.pop()
 
-// myArr.unshift(9)
-// myArr.shift()
+// myArr.unshift(9) adds the element at first index of the arrra
+// myArr.shift() removes the first element of the arra
 
 // console.log(myArr.includes(9));
 // console.log(myArr.indexOf(3));
