@@ -23,7 +23,7 @@ const JsUser = {
 // console.log(JsUser[mySym])
 
 JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser) //freezes the object. No operations can be performed on the object after this.
 JsUser.email = "hitesh@microsoft.com"
 // console.log(JsUser);
 
