@@ -44,3 +44,71 @@ console.log(Object.values(regular.fullName));
 console.log(Object.values(regular));
 console.log(Object.entries(regular));
 console.log(regular.hasOwnProperty('amit'))
+
+const message = 'Hello world' // Try edit me
+
+// Update header text
+document.querySelector('#header').innerHTML = message
+
+// Log to console
+console.log(message);
+// Write a JavaScript program to list the properties of a JavaScript object.
+// Sample object:
+let Student = { //Object Literal
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+
+const properties=Object.keys(Student);
+console.log(properties.join(','));
+
+// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+// Sample object:
+var s = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+// Object.freeze(s); -- freezes the object
+
+delete s.rollno;
+console.log(s)
+
+// Write a JavaScript program to get the length of a JavaScript object.
+// Sample object :
+console.log(Object.keys(s).length);
+
+// Write a JavaScript program to get the length of a JavaScript object.
+// Sample object :
+var library = [ 
+    {
+        title: 'Bill Gates',
+        author: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        title: 'Steve Jobs',
+        author: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: 'Suzanne Collins',
+        readingStatus: false
+    }];
+
+for (const elem of library) {
+  if(elem.readingStatus) console.log(`Already read ${elem.title} by ${elem.author}`);
+  else console.log(`You still have to read ${elem.title} by ${elem.author}`);
+}
+
+function Cylinder(cyl_height, cyl_diameter) {
+  this.cyl_height = cyl_height;
+  this.cyl_diameter = cyl_diameter;
+}
+console.log(new Cylinder(5,7));
+
+Cylinder.prototype.volume=function(){
+  let r=this.cyl_diameter/2;
+  return (Math.PI * Math.pow(r,2) *this.cyl_height).toFixed(4);
+};
+console.log(new Cylinder(3,4).volume());
