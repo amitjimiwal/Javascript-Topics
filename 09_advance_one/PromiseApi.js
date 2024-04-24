@@ -13,35 +13,35 @@ console.log("Promise Api");
 
 function p1() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("P1 resolved after 4s");
-    }, 4000);
     // setTimeout(() => {
-    //   reject("P1 rejected after 4s");
+    //   resolve("P1 resolved after 4s");
     // }, 4000);
+    setTimeout(() => {
+      reject("P1 rejected after 4s");
+    }, 4000);
   });
 }
 
 function p2() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("P2 Resolved after 3s");
-    }, 3000);
     // setTimeout(() => {
-    //   reject("P2 rejected after 2s");
-    // }, 2000);
+    //   resolve("P2 Resolved after 3s");
+    // }, 3000);
+    setTimeout(() => {
+      reject("P2 rejected after 2s");
+    }, 2000);
   });
 }
 
 function p3() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      // alert("Hello");
-      resolve("P3 resolve after 5s");
-    }, 3000);
     // setTimeout(() => {
-    //   reject("P3 resolved after 4s");
-    // }, 5000);
+    //   // alert("Hello");
+    //   resolve("P3 resolve after 5s");
+    // }, 3000);
+    setTimeout(() => {
+      reject("P3 resolved after 4s");
+    }, 5000);
   });
 }
 
@@ -53,9 +53,9 @@ function p3() {
 
 //Settled Promise = fulfilled | Rejected;
 // Promise.allSettled([p1(), p2(), p3()]).then((res) => console.log(res))
-  // .catch((err) => console.log(err));
-  // Give the resultant array after the settlement of each promise. General Response
-  //Extension to Promise.all
+// .catch((err) => console.log(err));
+// Give the resultant array after the settlement of each promise. General Response
+//Extension to Promise.all
 [
   ({
     status: "fulfilled",
@@ -68,7 +68,7 @@ function p3() {
   {
     status: "fulfilled",
     value: "P3 resolve after 5s",
-  })
+  }),
 ];
 
 //Promise.race() - Race for first Settlement
@@ -80,10 +80,10 @@ function p3() {
 // Gives the first Settled Promise as it's response if fullfilled => .then handler || if rejected =? .catch handler
 //If any of the two promises are settled same time => then the promise who is first in relative order will be the resultant
 
-
 //Extension of race => Only first fullfilled Promise will be the output
-Promise.any([p1(),p2(),p3()])
+Promise.any([p1(), p2(), p3()])
   .then((res) => {
     console.log(res);
   })
-  // .catch((err) => console.log(err));
+  .catch((err) => console.log(err));
+//If all the promise fails to setlled success then a message will be throw as an Error: AggregateError: All promises were rejected
