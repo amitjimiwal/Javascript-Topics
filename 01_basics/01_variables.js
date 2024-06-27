@@ -25,5 +25,6 @@ because of issue in block scope and functional scope
 */
 
 
-
+let ranking;
+console.log(ranking || "10000"); // undefined
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
